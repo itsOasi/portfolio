@@ -1,0 +1,131 @@
+:root{
+    --text_color: #FFFFFF;
+    --bg_color: #000000;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: var(--bg_color);
+    color: var(--text_color);
+}
+
+#header{
+    text-align: center;
+    position: fixed;
+    color: var(--text_color);
+    background-color: var(--bg_color);
+    height: 10%;
+    top: 0%;
+    width: 100%;
+    left: 0%;
+    z-index: 3;
+}
+
+#links{
+    position: absolute;
+    margin: 2.5% 5%;  
+}
+
+#body{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    justify-content: center;
+}
+#exbs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.exb{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12vh;
+    height: 100vh;
+    width: 100%;
+}
+.exb_body{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    vertical-align: middle;
+    min-width: 60%;
+}
+
+@media screen and (max-width: 800px) {
+    .exb{
+        margin-top: 12vh;
+    }
+    .exb_body{
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+    }
+}
+.media{
+    display: flex;
+    max-height: 20em;
+}
+.media > img{
+    max-height: min-content;
+    aspect-ratio: 1 1;
+    max-height: 10em;
+    margin: 1em;
+}
+
+.desc{
+    margin: 2.5%;
+    max-width: 20em;
+}
+hr{
+    border-width: .2em;
+    border-radius: 3em;
+    border-style:solid;
+    border-color: var(--text_color);
+}
+@media screen and (max-width: 800) {
+    .media > img{
+        max-width: 8em;
+    }
+    .desc{
+        width: 80%;
+    }
+}
+
+
+
+nav{
+    position: fixed;
+    line-height: 3em;
+    width: 20em;
+    height: 82%;
+    left: 0%;
+    top: 10%;
+    padding: 2em;
+    background-color: #FFFFFF55;
+    z-index: 3;
+    display: none;
+}
+
+#socials{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    bottom: 5%;
+}
+.interactive{
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text_color);
+}
+.interactive:hover{
+    text-decoration: underline;
+}
+#socials > a > img{
+    width: 3em;
+    margin-right: 1em;
+}

@@ -1,0 +1,46 @@
+{
+    "intro": {
+        "folder":"/static/exhibits/intro",
+        "bg_color":"#000000",
+        "txt_color":"#FFFFFF",
+        "title":"title.svg",
+        "desc":"I am a self-taught software/web developer, graphic artist, musician, videographer, and aspiring entrepreneur who's goal is to accomplish his goals so that others can accomplish theirs",
+        "media":[
+            "profile.png"
+        ]
+    },
+    
+    "r_and_c": {
+        "folder":"/static/exhibits/r_and_c",
+        "bg_color":"#BA79BA",
+        "txt_color":"#FFFFFF",
+        "title":"title.svg",
+        "desc":"My cover letter and resume, outlining my most recent/relevant projects and work history (click to view)",
+        "media":[
+            "resume.png",
+            "cover_letter.png"
+        ]
+    },
+    
+    "ghostpen":{
+        "folder":"/static/exhibits/ghostpen",
+        "bg_color":"#A6A6EE",
+        "txt_color":"#FFFFFF",
+        "title":"title.svg",
+        "desc":"GhostPen.org is a Freelancing platform developed using the HTML, CSS, JavaScript and jQuery with Python and Flask as the server running on AWS",
+        "media":[
+            "screenshot.jpg"
+        ]
+    },
+    
+    "candy_kitty":{
+        "folder":"/static/exhibits/candy_kitty",
+        "bg_color":"#FFFFFF",
+        "txt_color":"#000000",
+        "title":"title.svg",
+        "desc":"Candy Kitty is my first attempt at releasing an app to an app store. It's a bit rough around the edges, but I'm proud of it for my first release.",
+        "media":[
+            
+        ]
+    }    
+}

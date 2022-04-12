@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/common.js"></script>
+    <script src="static/main.js"></script>
+    <title>itsOasi's Portfolio</title>
+</head>
+<body>
+    <main id="header">
+        <div class="interactive" id="links">Links</div>
+        <h1>itsOasi's Portfolio</h1>
+        <script>
+            $("#links").click(function(){
+                if ($("nav").css("display") == "none"){
+                    $("nav").slideToggle(200);
+                    $("nav").css("display", "flex");
+                    $("nav").css("flex-direction", "column");
+                }else{
+                    $("nav").slideToggle(200);
+                }
+            });
+        </script>
+    </main>
+    <div id="body">
+        <nav>
+            <a class="interactive" href="https://www.linkedin.com/in/ontario-stallings-95888b14a/">LinkedIn</a>
+            <a class="interactive" href="http://ghostpen.org">GhostPen</a>
+            <a class="interactive" href="http://ostally001.wixsite.com/oasicomms">Oasicomms</a>
+            <a class="interactive" href="https://ostally001.wixsite.com/oasicomms/games/Candy-Kitty">Candy Kitty</a>
+            <div id="socials">
+                <a href="https://www.facebook.com/itsOasi" class="interactive" alt="Facebook"><img img src="https://cdn.freebiesupply.com/logos/large/2x/facebook-logo-2019.png"></a>
+                <a href="https://www.instagram.com/its.oasi/" class="interactive" alt="Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/800px-Instagram_logo_2016.svg.png"></a>
+                <a href="https://twitter.com/itsOasi" class="interactive" alt="Twitter"><img src="https://www.pngkey.com/png/full/2-27646_twitter-logo-png-transparent-background-logo-twitter-png.png"></a>
+                <a href="https://open.spotify.com/artist/6R8EWF2GMXjKGKK2A0Gn6b?si=txrJzmGTTmuPgwbs3sYsPg" class="interactive" alt="Spotify"><img src="https://www.freepnglogos.com/uploads/spotify-logo-png/song-spotify-logo-18.png"></a>
+                <a href="https://www.youtube.com/channel/UC3YqyiFdsoD5RhYKJc_R3FQ" class="interactive" alt="YouTube"><img src="https://www.freepnglogos.com/uploads/play-youtube-youtube-app-logo-youtube-logo-youtube--24.png"></a>
+            </div>
+        </nav>
+        <div id="exbs">
+
+        </div>
+    </div>
+</body>
+</html>
