@@ -35,7 +35,7 @@
     
     "candy_kitty":{
         "folder":"/static/exhibits/candy_kitty",
-        "bg_color":"#FFFFFF",
+        "bg_color":"#FCF397",
         "txt_color":"#000000",
         "title":"title.svg",
         "desc":"Candy Kitty is my first attempt at releasing an app to an app store. It's a bit rough around the edges, but I'm proud of it for my first release.",

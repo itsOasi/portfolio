@@ -2,10 +2,6 @@
 
 // page enter
 $(function(){
-  $(document).scroll(function(event){
-    
-  });
-
   console.log("hello world");
   // get the container that holds the exhibits
   let body = $("#exbs");

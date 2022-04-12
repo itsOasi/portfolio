@@ -36,3 +36,16 @@ function load_exb(_exb){
     exb.append(body);
     return exb;
 }
+
+function change_exhibits(exhibits, index){
+    let i = 0;
+    for (exb in exhibits){
+        if (i == index){
+            exb.show(300);
+        }
+        else{
+            exb.hide(300)
+        }
+        i++
+    }
+}
