@@ -18,7 +18,7 @@ function load_exb(_exb){
     // get media
     let media = $("<div class='media'></div>");
     for (m in _exb["media"]){
-        let img = $("<img>").attr("src", _exb["folder"]+"/"+_exb["media"][m]);
+        let img = $("<embed class='content'></embed>").attr("src", _exb["folder"]+"/"+_exb["media"][m]);
         media.append(img);
     }
     // track whether the exhibit is in focus

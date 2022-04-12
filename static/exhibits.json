@@ -17,8 +17,7 @@
         "title":"title.svg",
         "desc":"My cover letter and resume, outlining my most recent/relevant projects and work history (click to view)",
         "media":[
-            "resume.png",
-            "cover_letter.png"
+            "resume and cover letter purp short.pdf"
         ]
     },
     
@@ -38,9 +37,9 @@
         "bg_color":"#FCF397",
         "txt_color":"#000000",
         "title":"title.svg",
-        "desc":"Candy Kitty is my first attempt at releasing an app to an app store. It's a bit rough around the edges, but I'm proud of it for my first release.",
+        "desc":"Candy Kitty is my first attempt at releasing an app to an app store. It's a bit rough around the edges, but I'm proud of it for my first release. It's linked in the 'Links' and available on my website (also in the 'Links').",
         "media":[
-            
+            "banner.webp"
         ]
     }    
 }

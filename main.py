@@ -8,7 +8,7 @@ def main():
 
 @app.route("/pull.php")
 def pull():
-    return render_template("pull.php")
+    return render_template("pull.php", methods=["GET", "POST"])
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
