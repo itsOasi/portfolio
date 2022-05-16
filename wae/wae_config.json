@@ -1,0 +1,9 @@
+{
+    "version": "0.0.1",
+    "debug":true,
+    "name":"My Wae",
+    "exhibits":[
+        "home",
+        "editor"
+    ]
+}

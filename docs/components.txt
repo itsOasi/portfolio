@@ -1,0 +1,3 @@
+Components represent individual or collections of html elements as features and their functionality. They can be buttons, 
+forms, entire sections of a page, a custom feature developed from scratch, etc.
+

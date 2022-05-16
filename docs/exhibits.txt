@@ -1,0 +1,2 @@
+Exhibits represent pages in an application. They tell WAE which components to load, where to place them, 
+and how they spatially interact with eachother.

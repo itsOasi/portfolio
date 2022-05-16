@@ -1,0 +1,43 @@
+{
+    "meta":{    
+        "page_title":"",
+        "tab_title":"Innova Wae"
+    },
+    "style":{
+        "bg_color":"#000000",
+        "txt_color":"#FFFFFF"
+    },
+    "relation":{
+        "adjacent":[],
+        "transition":[]
+    },
+    "content":{    
+        "body":{
+            "type":"vbox",
+            "children":["intro", "sign_in"]
+        },
+        "intro":{
+            "type":"component",
+            "id":"intro",
+            "folder":"components/innova_basic/basic_intro",
+            "bg_color":"#333333",
+            "txt_color":"#FFFFFF",
+            "tags":["inline"]
+        },
+        "sign_in":{
+            "id":"sign_in",
+            "type":"component",
+            "folder":"components/innova_basic/basic_form",
+            "bg_color":"#000000",
+            "txt_color":"#FFFFFF",
+            "tags":["inline"]
+        },
+        "nav":{
+            "type":"component",
+            "id":"nav",
+            "folder":"components/innova_basic/basic_nav",
+            "bg_color":"#FFFFFF55",
+            "tags":["script", "hidden"]
+        }
+    }
+}
