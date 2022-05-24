@@ -4,6 +4,7 @@
     "name":"My Wae",
     "exhibits":[
         "home",
-        "editor"
+        "editor",
+        "about"
     ]
 }

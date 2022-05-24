@@ -1,4 +1,4 @@
-import main
+from waitress import serve
+from main import app
 
-if __name__ == "__main__":
-    main.app.run(host="0.0.0.0", port=80, debug=True)
+serve(app, listen="*:80")

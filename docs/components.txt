@@ -1,3 +1,5 @@
 Components represent individual or collections of html elements as features and their functionality. They can be buttons, 
 forms, entire sections of a page, a custom feature developed from scratch, etc.
 
+A basic component is simply a comp.html file in a folder named for the component. A component can also include a script.js, 
+and a vector.svg.

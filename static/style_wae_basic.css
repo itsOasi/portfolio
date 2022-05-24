@@ -1,6 +1,9 @@
 :root{
     --text_color: #FFFFFF;
     --bg_color: #000000;
+    --accent-color: #6161ef;
+    --component-spacing: 10%;
+    --component-width: 60%;
 }
 
 body{
@@ -41,8 +44,14 @@ body{
 }
 
 #exb{
+    position: absolute;
     left: 0;
     right: 0;
+}
+
+.box {
+    margin-top: var(--component-spacing);
+    text-align: center;
 }
 
 .vbox{
@@ -60,21 +69,20 @@ body{
     grid-template-columns: auto;
     grid-template-rows: auto;
 }
+
 .comp{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 15%;
-    width: 98.94vw;
-    height: 100vh;
+    padding-top: var(--component-spacing);
+    width: var(--component-width);
+    height: var(--component-spacing);
+    margin-left: 50%;   
+    transform: translateX(-50%);
 }
+
+
 .comp_body{
-    display: flex;
-    flex-direction: row;
     text-align: center;
-    vertical-align: middle;
-    align-items: center;
-    min-width: 60%;
     min-height: 10em;
 }
 .comp_body > hr{
@@ -119,22 +127,6 @@ hr{
     border-color: var(--text_color);
 }
 
-nav{
-    position: fixed;
-    line-height: 3em;
-    width: max-content;
-    max-width: 30%;
-    height: min-content;
-    max-height: 80%;
-    left: 0%;
-    top: 10%;
-    padding: 2em;
-    border-radius: 0em 0em 1em 1em;
-    background-color: #00000077;
-    z-index: 3;
-    display: none;
-}
-
 #socials{
     display: flex;
     flex-direction: row;
@@ -142,11 +134,20 @@ nav{
     margin-top: 2em;
     bottom: 5%;
 }
+.action{
+    padding: .5em 3em;
+    margin: 1em;
+    background-color: var(--accent-color);
+    color: var(--text_color);
+    border-radius: 3em;
+    border: none;
+    font-size: larger;
+    font-weight: bolder;
+}
 .interactive{
     cursor: pointer;
     font-weight: bold;
     text-decoration: none;
-    color: var(--text_color);
 }
 .interactive:hover{
     text-decoration: underline;

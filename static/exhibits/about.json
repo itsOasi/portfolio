@@ -1,0 +1,43 @@
+{
+    "meta":{    
+        "page_title":"About WAE",
+        "tab_title":"About"
+    },
+    "style":{
+        "background-color":"#000000",
+        "color":"#FFFFFF"
+    },
+    "relation":{
+        "adjacent":[],
+        "transition":[]
+    },
+    "components":{    
+        "body":{
+            "type":"vbox",
+            "spacing": "10em",
+            "children":[
+                "intro"
+            ]
+        },
+        "intro":{
+            "type":"component",
+            "id":"intro",
+            "folder":"project/about_wae",
+            "style":{
+                "background-color":"#333333",
+                "color":"#FFFFFF"
+
+            },
+            "tags":["inline"]
+        },
+        "nav":{
+            "type":"component",
+            "id":"nav",
+            "folder":"innova_basic/basic_nav",
+            "style":{
+                "background-color":"#FFFFFF55"
+            },
+            "tags":["script", "hidden"]
+        }
+    }
+}

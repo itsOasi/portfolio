@@ -1,7 +1,7 @@
 {
     "meta":{    
-        "page_title":"",
-        "tab_title":"Innova Wae"
+        "page_title":"What's Up",
+        "tab_title":"Woah Broski"
     },
     "style":{
         "bg_color":"#000000",
@@ -11,32 +11,60 @@
         "adjacent":[],
         "transition":[]
     },
-    "content":{    
-        "body":{
+    "components":{    
+        "main":{
+            "id":"main",
             "type":"vbox",
-            "children":["intro", "sign_in"]
+            "spacing": "5em",
+            "children":[
+                "intro",
+                "radio_player"
+            ]
         },
         "intro":{
             "type":"component",
             "id":"intro",
-            "folder":"components/innova_basic/basic_intro",
-            "bg_color":"#333333",
-            "txt_color":"#FFFFFF",
+            "folder":"innova_basic/basic_intro",
+            "style":{
+                "background-color":"#FF77GG",
+                "color":"#FFFFFF"
+            },
             "tags":["inline"]
         },
-        "sign_in":{
-            "id":"sign_in",
+        "radio_player":{
+            "id":"radio_player",
             "type":"component",
-            "folder":"components/innova_basic/basic_form",
-            "bg_color":"#000000",
-            "txt_color":"#FFFFFF",
-            "tags":["inline"]
+            "folder":"innova_basic/github_card",
+            "style":{
+                "background-color":"#000000",
+                "color":"#FFFFFF"
+            },
+            "tags":["inline"],
+            "content":{
+                "embed":{
+                    "data_github": "itsOasi"
+                }
+            }
         },
         "nav":{
             "type":"component",
             "id":"nav",
-            "folder":"components/innova_basic/basic_nav",
-            "bg_color":"#FFFFFF55",
+            "folder":"innova_basic/basic_nav",
+            "style":{
+                "position": "fixed",
+                "line-height": "3em",
+                "width": "max-content",
+                "max-width": "30%",
+                "height": "min-content",
+                "max-height": "80%",
+                "left": "0%",
+                "top": "10%",
+                "padding": "2em",
+                "border-radius": "0em 0em 1em 1em",
+                "background-color": "#00000077",
+                "z-index": "3",
+                "display": "none"
+            },
             "tags":["script", "hidden"]
         }
     }
