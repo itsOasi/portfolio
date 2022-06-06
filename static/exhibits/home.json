@@ -1,48 +1,247 @@
 {
     "meta":{    
-        "page_title":"What's Up",
-        "tab_title":"Woah Broski"
+        "title":"Woah Broski"
     },
     "style":{
-        "bg_color":"#000000",
-        "txt_color":"#FFFFFF"
+        "background-color":"#000",
+        "color":"#FFF"
     },
     "relation":{
         "adjacent":[],
-        "transition":[]
+        "transition":[],
+        "extras":{
+            "stylesheets":[
+                "static/style.css"
+            ],
+            "scripts":[]
+        }
     },
-    "components":{    
+    "components":{
+        "header":{
+            "type":"component",
+            "id":"header",
+            "style":{
+                "background-color":"#00000055",
+                "padding":"0vh"
+            },
+            "content":{
+                ".title":{
+                    "text":"ItsOasi's Portfolio"
+                }
+            },
+            "folder":["innova_basic/basic_header"],
+            "children":["nav"]
+        },
         "main":{
             "id":"main",
             "type":"vbox",
-            "spacing": "5em",
             "children":[
                 "intro",
-                "radio_player"
+                "r_and_c",
+                "ghostpen",
+                "xre",
+                "SNow_logo",
+                "wae",
+                "candy_kitty",
+                "music"
             ]
         },
         "intro":{
             "type":"component",
             "id":"intro",
-            "folder":"innova_basic/basic_intro",
-            "style":{
-                "background-color":"#FF77GG",
-                "color":"#FFFFFF"
-            },
-            "tags":["inline"]
-        },
-        "radio_player":{
-            "id":"radio_player",
-            "type":"component",
-            "folder":"innova_basic/github_card",
-            "style":{
-                "background-color":"#000000",
-                "color":"#FFFFFF"
-            },
-            "tags":["inline"],
+            "folder":"innova_basic/basic_section",
             "content":{
-                "embed":{
-                    "data_github": "itsOasi"
+                ".title":{
+                    "text": "Ontario Stallings"
+                },
+                ".sub":{
+                    "text": "ostally001@gmail.com | (708) 518-4273"
+                },
+                ".desc":{
+                    "text": "I am a self-taught software/web developer, graphic artist, musician, videographer, and aspiring entrepreneur who's goal is to accomplish his goals so that others can accomplish theirs."
+                },
+                ".media_container":{
+                    "src":"portfolio/intro/profile.png"
+                }
+            },
+            "children":[
+                "scroll_icon"
+            ]
+        },
+        "scroll_icon":{
+            "type":"svg",
+            "folder":"innova_basic/scroll_icon",
+            "tags":["svg"],
+            "id":"scroll_icon",
+            "style":{
+                "width":"10em",
+                "margin-left":"50%",
+                "text-align":"centerx"
+            }
+        },
+
+        "r_and_c":{
+            "id":"r_and_c",
+            "type":"component",
+            "folder":"innova_basic/basic_section",
+            "tags":["image"],
+            "style":{
+                "background-color":"#BA79BA"
+            },
+            "content":{
+                ".title":{
+                    "text": "Resume and Cover Letter"
+                },
+                ".sub":{
+                    "text": "Available through the menu in the top-right"
+                },
+                ".desc":{
+                    "text": "My cover letter and resume, outlining my most recent/relevant projects and work history."
+                },
+                ".media_container":
+                {
+                    "src":"portfolio/r_and_c/resume and cover letter purp short.pdf"
+                }
+            }
+        },
+        "ghostpen":{
+            "id":"ghostpen",
+            "type":"component",
+            "folder":"innova_basic/basic_section",
+            "style":{
+                "background-color":"#A6A6EE"
+            },
+            "content":{
+                ".title":{
+                    "text": "Ghostpen.org"
+                },
+                ".sub":{
+                    "text":"currently under maintenance"
+                },
+                ".desc":{
+                    "text": "GhostPen.org is a Freelancing platform developed using the HTML, CSS, JavaScript and jQuery with Python and Flask as the server running on AWS."
+                },
+                ".media_container":
+                {
+                    "src":"portfolio/ghostpen/screenshot.png"
+                }
+            }
+
+        },
+        "xre":{
+            "skip":true,
+            "id":"xre",
+            "type":"component",
+            "folder":"innova_basic/basic_iframe",
+            "tags":["xr"],
+            "style":{
+                "background-color":"#FFFFFF"
+            },
+            "content":{
+                ".title":{
+                    "text": "XR Exhibit"
+                },
+                ".sub":{
+                    "text":"stay tuned for more cool stuff"
+                },
+                ".desc":{
+                    "text": "I've always had a deep interest in interactive technologies and virtual realities and spaces. This exhibit will display my personal ventures into the world of interactive virtual graphics."
+                },
+                ".media_container":{
+                    "src":"/portfolio/xre/car.glb"
+                }
+            }
+        },
+        "SNow_logo":{
+            "id":"SNow_logo",
+            "type":"img",
+            "children":["SNow"],
+            "content":{
+                "#SNow_logo":{
+                    "src":"portfolio/snow/ServiceNow_logo.svg.png"
+                }
+            }
+        },
+        "SNow":{
+            "id":"SNow",
+            "type":"component",
+            "folder":"innova_basic/basic_iframe",
+            "tags":["ext"],
+            "style":{
+                "background-color":"#F6F6F6",
+                "color":"#000000"
+
+            },
+            "content":{
+                "remove":".title",
+                ".media_container":{
+                    "x_src":"https://www.loom.com/embed/dced734f7dfd41daa369873c434c26b0"
+                }
+            }
+        },
+        "wae":{
+            "id":"wae",
+            "type":"component",
+            "folder":["innova_basic/basic_section"],
+            "content":{
+                ".title":{
+                    "text": "itsOasi's Web App Engine"
+                },
+                ".desc":{
+                    "text":"A project to demonstrate my comprehension of data structures, algorithms, file systems, operating systems, and deeper philosophies regarding the relationships between software and hardware. This is a long and ongoing project for the sake of learning, experimentation, and exploration. This website is built using my engine!"
+                },
+                ".sub":{
+                    "text":"link to github repository in menu in top-left"
+                },
+                ".media_container":{
+                    "src":"portfolio/fae/fae.png"
+                }
+            }
+        },
+        "candy_kitty":{
+            "id":"candy_kitty",
+            "type":"component",
+            "folder":["innova_basic/basic_section"],
+            "style":{
+                "background-color":"#FCF397",
+                "color":"#555"
+            },
+            "content":{
+                ".title":{
+                    "text": "Candy Kitty"
+                },
+                ".desc":{
+                    "text":"Candy Kitty is my first attempt at releasing an app to an app store. It's a bit rough around the edges, but I'm proud of it for my first release. You can find it in the upper left menu and on my other portfolio website, 'Oasicomms' (also in the menu)."
+                },
+                ".sub":{
+                    "text":"Available through the menu in the top-left"
+                },
+                ".media_container":{
+                    "src":"portfolio/candy_kitty/poster.png"
+                }
+            }
+        },
+        "music":{
+            "id":"music",
+            "type":"component",
+            "folder":["innova_basic/basic_iframe"],
+            "tags":["ext"],
+            "style":{
+                "background-color":"#341648",
+                "color":"#E9DB8D"
+            },
+            "content":{
+                ".title":{
+                    "text": "Music"
+                },
+                ".desc":{
+                    "text":"Music has always been an exploratory means of expression. I have a passion for experimenting with the intricacies of sound design and discovering for myself the boundaries what could be percieved as music."
+                },
+                ".sub":{
+                    "text":"Follow me on spotify!"
+                },
+                ".media_container":{
+                    "x_src":"https://open.spotify.com/embed/artist/6R8EWF2GMXjKGKK2A0Gn6b?utm_source=generator&theme=0"
                 }
             }
         },
@@ -58,10 +257,10 @@
                 "height": "min-content",
                 "max-height": "80%",
                 "left": "0%",
-                "top": "10%",
+                "top": "5em",
                 "padding": "2em",
                 "border-radius": "0em 0em 1em 1em",
-                "background-color": "#00000077",
+                "background-color":"#00000055",
                 "z-index": "3",
                 "display": "none"
             },

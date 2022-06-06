@@ -7,6 +7,6 @@ $(function(){
   if (url == ""){
     url = "home"
   }
-  load_exhibit("static/exhibits/"+url, $("#exb"));
+  exhibit.load("static/exhibits/"+url, $("#exb"));
 
 });
