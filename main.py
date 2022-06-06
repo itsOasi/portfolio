@@ -3,6 +3,10 @@ import os
 import wae
 app = Flask(__name__)
 
+@app.route("/")
+def no_slug():
+    return wae.output.load_index_page()
+
 @app.route("/<slug>")
 def main(slug):
     return wae.output.load_index_page()
