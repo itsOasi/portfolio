@@ -176,9 +176,12 @@
                 "remove":".title",
                 ".media_container":{
                     "x_src":"https://www.loom.com/embed/dced734f7dfd41daa369873c434c26b0"
+<<<<<<< HEAD
                 },
                 ".desc":{
                     "text":"I completed a bootcamp where I gained foundational knowledge of ITSM and ITIL and learned the fundamentals of ServiceNow, an aPaaS service."
+=======
+>>>>>>> 66af331bd961f665ee60ab41672d9c71ad9fbe0f
                 }
             }
         },
