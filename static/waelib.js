@@ -165,27 +165,36 @@ let configure = {
         if (comp_json.content){
             let content = exb_data.components[comp_name].content;
             for (element in content){
+                let element_data = content[element];
                 if (element == "remove"){
-                    let c = comp_body.find(content[element]);
+                    let c = comp_body.find(element_data);
                     dom.remove(c);
                     continue;
                 }
                 wae_debug(`for ${element}`);
-                if (content[element].text){
-                    dom.set_text(content[element].text, comp_body.find(`${element}`));
-                    continue;
-                }
-                if (content[element].src){
-                    dom.set_src(comp_folder+content[element].src, comp_body.find(`${element}`));
-                    continue;
-                }
-                if (content[element].x_src){
-                    dom.set_src(content[element].x_src, comp_body.find(`${element}`));
-                    continue;
-                }
-                dom.set_attr(element, content[element][0], comp_body.find(`${element}`));
+                this.element_attr(element_data, element, comp_body)
             }
         }
+    },
+
+    element_attr: async function (element_data, element, comp_body){
+        for (attr in element_data){
+            switch (attr){
+                case "text":
+                    dom.set_text(element_data[attr], comp_body.find(`${element}`));
+                    break;
+                case "src":
+                    dom.set_src(comp_folder+element_data[attr], comp_body.find(`${element}`));
+                    break;
+                case "x_src":
+                    dom.set_src(element_data[attr], comp_body.find(`${element}`));
+                    continue;
+                default:
+                    dom.set_attr(element, element_data[attr], comp_body.find(`${element}`));
+            }
+        }
+        
+        
     },
 
     // read children from exhibit file and creates them

@@ -1,6 +1,6 @@
 :root{
-    --text_color: #000;
-    --bg_color: #fff;
+    --text_color: #fff;
+    --bg_color: #000;
     --accent-color: #6161ef;
     --component-spacing: 10%;
     --component-width: 80vw;
@@ -98,16 +98,13 @@ body{
 }
 .sub{
     font-weight: lighter;
-    font-size: .7em;
+    font-size: 1em;
 }
 .media_container{
     display: flex;
-    max-height: 20em;
-    padding: 2em;
+    max-height: 40em;
+    min-height: 20em;
     justify-content: center;
-}
-.content{
-    max-width: 500px;
     margin: 1.5em;
     border-radius: 1em;
     box-shadow: .5em .5em var(--text_color);
@@ -176,15 +173,17 @@ hr{
         border-width: .15em;
     }    
     .comp{
-        margin-top: 12vh;
+        
+        height: 100%;
+        align-items: center;
     }
     .fbox{
         flex-direction: column;
         width: 80%;
         justify-content: middle;
     }
-    .content{
-       max-width: 300px;
+    .media_container{
+       max-width: 80%;
        box-shadow: .25em .25em var(--text_color);
 
     }
