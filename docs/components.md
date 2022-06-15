@@ -31,6 +31,7 @@ This option gives a lot more flexibility as you can create powerful peices of co
     / your_component
       - comp.html
       - script.js
+      - your_component.md
       - file_name.svg
       - file_name2.png
       - file_name_etc.txt
@@ -44,3 +45,6 @@ This option gives a lot more flexibility as you can create powerful peices of co
  ``` component.generate(tag, comp_name) ```
 
 This option is good quickly displaying information and loading icons or scripts.
+
+### Goals
+- components downloadable
