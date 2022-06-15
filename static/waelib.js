@@ -299,10 +299,7 @@ let exhibit = {
         wae_debug(`loading exhibit: ${path}`);
         // get exhibit file
         exb_data = await load.json(`${path}.json`);
-<<<<<<< HEAD
         wae_debug(`${exb_data}`);
-=======
->>>>>>> 66af331bd961f665ee60ab41672d9c71ad9fbe0f
         // copies data to a separate cache for later use
         exb_data_cache = exb_data;
         // set styling info of the page
@@ -356,17 +353,11 @@ let exhibit = {
     add_extras: function(body){
         let stylesheets = exb_data.relation.extras.stylesheets;
         let scripts = exb_data.relation.extras.scripts;
-<<<<<<< HEAD
         wae_debug(`${stylesheets}`);
         for (sheet in stylesheets){
             dom.add_stylesheet(stylesheets[sheet], body);
         }
         wae_debug(`${scripts}`);
-=======
-        for (sheet in stylesheets){
-            dom.add_stylesheet(stylesheets[sheet], body);
-        }
->>>>>>> 66af331bd961f665ee60ab41672d9c71ad9fbe0f
         for (script in scripts){
             dom.add_script(scripts[script], body);
         }

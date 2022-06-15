@@ -1,5 +1,0 @@
-Exhibits represent pages in an application. They tell WAE which components to load, where to place them, 
-and how they spatially interact with eachother.
-
-An exhibit resides in the exhibits folder, and is named after the page it represents. When the user goes 
-to a page with the name of the exhibit, WAE will load the corresponding exhibit file.
