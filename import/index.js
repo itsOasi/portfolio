@@ -11,7 +11,7 @@ $(function(){
   }
 
   // load the exhibit corresponding to the url
-  exhibit.load("static/exhibits/"+url, $("#exb"));
+  exhibit.load("static/import/exhibits/"+url, $("#exb"));
   // make sure your exhibit names ^^^ match the url names
 
 });

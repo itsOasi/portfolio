@@ -1,7 +1,7 @@
 // data for the currently loaded exhibit
 let exb_data;
 let exb_data_cache;
-let comp_folder = "static/components/";
+let comp_folder = "static/import/components/";
 let debug = true;
 function wae_debug(message){
     debug ? console.log(message) : null;
