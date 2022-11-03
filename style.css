@@ -1,0 +1,23 @@
+body{
+	color: "#44D2F2";
+	background-color: "#8c0738";
+	overflow: hidden;
+}
+
+main {
+	position: absolute;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 200%;
+	height: 200%;
+}
+
+.item > img {
+	border-radius: 2rem;
+}
+
+.item > p {
+	position: relative;
+	font-weight: bold;
+}
