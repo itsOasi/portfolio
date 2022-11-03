@@ -1,21 +1,29 @@
-const navSpeed = 2.5
+const main = document.getElementById("main");
+let navSpeed = 2.5
 let numOfItems = 0
-let addItem = (text, imageLink) => {
-	let main = document.getElementById("main");
+let paused = false;
+let addItem = (text, imgHeight, imageLink) => {
 	let item = document.createElement("div");
 	item.id = `item_${numOfItems}`;
 	item.classList.add("item");
 	let txt = document.createElement("p");
 	let img = document.createElement("img");
 	txt.innerText = text;
-	txt.style.bottom = "3 rem"
+	txt.style.bottom = "3rem"
+	txt.style.left = "3rem"
 	img.src = imageLink;
-	img.style.maxHeight = "20rem";
-	img.style.left = Math.floor(Math.random() * (window.screenX * 2));
-	img.style.top = Math.floor(Math.random() * (window.screenY * 2));
+	img.style.maxHeight = `${imgHeight}rem`;
 	item.append(img);
 	item.append(txt);
 	main.append(item);
+	main.onmouseenter = (event) => {
+		img.style.maxHeight = `${imgHeight*1.5}rem`;
+		paused = !paused;
+	}
+	main.onmouseleave = (event) =>{
+		img.style.maxHeight = `${imgHeight}rem`;
+		paused = !paused;
+	}
 	numOfItems++;
 };
 
@@ -23,36 +31,8 @@ document.body.onload = (event) => {
 	// get the url
 	let url = document.location.pathname.slice(1);
 	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	addItem(`Welcome to my Portfolio site
-	It's still a WIP, but here\'s some chicken`, 
-		"https://assets.epicurious.com/photos/62f16ed5fe4be95d5a460eed/1:1/w_1920,c_limit/RoastChicken_RECIPE_080420_37993.jpg")
-	
+	It's still a WIP`, 20,
+		"static/components/portfolio/intro/20220328_152539.jpg");
 	let items = document.getElementById("main");
 	let oldPageX = window.pageX;
 	let oldPageY = window.pageY;
@@ -86,6 +66,10 @@ document.body.onload = (event) => {
 
 	// on desktop
 	window.onmousemove = (event) => {
+		let speed = navSpeed
+		if (paused){
+			speed = navSpeed * .1;
+		}
 		navigate(event);
 	}
 	// on mobile
