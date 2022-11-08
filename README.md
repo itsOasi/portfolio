@@ -1,0 +1,3 @@
+# if you're seeing this message, it's too late...
+
+Just kidding I'm working on projects to add to my portfolio.
