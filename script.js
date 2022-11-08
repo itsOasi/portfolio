@@ -1,49 +1,50 @@
 import { animate } from "./animation.js";
 
 const main = document.getElementById("content");
-const navSpeed = .5
+const driftSpeed = .05
+const driftAmount = 5
 let numOfItems = 0
-let paused = false; // sets nav speed slower
 
 let quotes = [
-	"Move fast and break things?",
-	"Like what you see?",
-	"Let's do business!",
-
+	"Move fast and break things? 😂",
+	"Like what you see? Made with 💞",
+	"Let's do business! 💼",
+	"Rome wasn't built in a day! 📈",
+	"We live in a society! 🏢",
+	"I got bills to pay! 😤"
 ];
 
 // Navigation
 let moveItems = (x, y) => {
-	let rect = main.getBoundingClientRect();
-	if (x){
-		main.style.left = `${rect.left + x}px`;
-	}
-	if (y){
-		main.style.top = `${rect.top + y}px`;
-	}
+	main.style.left = `${x*driftAmount}px`;
+	main.style.top = `${y*driftAmount}px`;
 }
 
-let addItem = (text, imageLink, imgHeight=10) => {
-	// creates an div with a bit of pic/video and a caption
-	let item = document.createElement("div");
+let addItem = (text, imageLink, href="", imgHeight=30) => {
+	// creates an div with a bit of media and a caption
+	let item = document.createElement("a");
 	item.id = `item_${numOfItems}`;
 	item.classList.add("item");
+	item.href = href;
+	if (!href){
+		item.style.cursor = "default";
+		item.onclick = (event) =>{
+			event.preventDefault();
+		}
+	}
+
 	let txt = document.createElement("p");
-	let img = document.createElement("embed");
 	txt.innerText = text;
+	
+	let img = document.createElement("embed");
 	img.src = imageLink;
 	img.style.maxHeight = `${imgHeight}rem`;
 	img.classList.add("media");
+	img.classList.add("media");
+
 	item.append(img);
 	item.append(txt);
 	main.append(item);
-	item.onmouseenter = () => {
-		paused = !paused
-	}
-	item.onmouseleave = () => {
-		paused = !paused
-	}
-
 	numOfItems++;
 };
 
@@ -51,51 +52,36 @@ document.body.onload = (event) => {
 	if (window.innerWidth > 800) {
 		document.body.style.overflow = "hidden";
 	}
-
-	document.getElementById("title").innerText = quotes[Math.floor(Math.random() * quotes.length)]
-
-	// get the url
-	let url = document.location.pathname.slice(1);
 	
-	addItem(`Welcome to my Portfolio site
+	document.getElementById("title").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+	setInterval(()=>{
+		document.getElementById("title").innerText = quotes[Math.floor(Math.random() * quotes.length)];
+	}, 5000);
+
+	addItem(`Welcome to my Portfolio site 🙋🏾
 		It's still a WIP`,
-		"static/components/portfolio/intro/20220328_152539.jpg");
-	addItem(`Welcome to my Portfolio site
-		It's still a WIP`,
-		"static/components/portfolio/intro/20220328_152539.jpg");
-	addItem(`Welcome to my Portfolio site
-			It's still a WIP`,
-			"./static/components/portfolio/candy_kitty/poster.png");
-	addItem(`Welcome to my Portfolio site
-		It's still a WIP`,
-		"static/components/portfolio/intro/20220328_152539.jpg");
+		"static/components/portfolio/intro/Profile picture final.png");
+	addItem(`Here is my resume`,
+			"static/components/portfolio/r_and_c/resume and cover letter purp short.pdf");
 	addItem(`Check out my latest certification! There's a ton more in my certifcations folder.`,
 		"https://drive.google.com/file/d/1cHzfV91oNkQJWjIeOW0Z-Y0NZ7WpX1hU/preview");
-	addItem(`Welcome to my Portfolio site
-		It's still a WIP`,
-		"static/components/portfolio/intro/20220328_152539.jpg");
+	addItem(`Here, you can find all of my source code. Even for this page!`,
+		"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+		"https://github.com/itsOasi");
 	
 	let oldPageX = window.pageX;
 	let oldPageY = window.pageY;
 	
-	let navigate = (event, speed) =>{
+	window.onmousemove = (event) =>{
 		let deltaY = event.pageY - oldPageY;
 		let deltaX = event.pageX - oldPageX;
 		
 		// move everything closer to the mouse
-		moveItems(-deltaX * speed, -deltaY * speed);
+		moveItems(deltaX * -driftSpeed, deltaY * -driftSpeed);
 				
 		// update previous coords
 		oldPageX = event.pageX;
 		oldPageY = event.pageY;
 	}
 
-	// on desktop
-	window.onmousemove = (event) => {
-		let speed = navSpeed
-		if (paused){
-			speed = navSpeed * .1;
-		}
-		navigate(event, speed);
-	}
 }
