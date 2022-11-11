@@ -6,7 +6,7 @@ const driftAmount = 5
 let numOfItems = 0
 
 let quotes = [
-	"Move fast and break things? 😂",
+	"Move fast and break things? 🤔",
 	"Like what you see? Made with 💞",
 	"Let's do business! 💼",
 	"Rome wasn't built in a day! 📈",
@@ -60,7 +60,7 @@ document.body.onload = (event) => {
 
 	addItem(`Welcome to my Portfolio site 🙋🏾
 		It's still a WIP`,
-		"static/components/portfolio/intro/Profile picture final.png");
+		"static/components/portfolio/intro/profile picture final.png");
 	addItem(`Here is my resume`,
 			"static/components/portfolio/r_and_c/resume and cover letter purp short.pdf");
 	addItem(`Check out my latest certification! There's a ton more in my certifcations folder.`,
