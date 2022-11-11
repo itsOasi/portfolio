@@ -40,7 +40,8 @@ h1 {
 
 @media screen and (max-width: 800px) {
 	#content {
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		flex-direction: column;
 		padding-left: 0%;
 		padding-top: 0%;
 		
@@ -54,9 +55,6 @@ h1 {
                 display: flex;
 		flex-direction: column;
 		align-items: center;
-	}
-	.media{
-		max-height: 5em;
 	}
 }
 
@@ -134,4 +132,11 @@ a, #socials_button {
 }
 #socials_button:hover > #socials > a{
 	opacity: 100%;
+}
+
+@media screen and (max-width: 800px){
+	.media{
+		max-width: 10em;
+		height: auto;
+	}
 }
