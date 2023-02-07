@@ -1,0 +1,18 @@
+:root {
+  /* fonts */
+  --font-source-code-pro: "Source Code Pro";
+
+  /* font sizes */
+  --font-size-base: 1rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2.5rem;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gainsboro: #d9d9d9;
+
+  /* Gaps */
+  --gap-sm: 0.63rem;
+  --gap-md: 1.81rem;
+}

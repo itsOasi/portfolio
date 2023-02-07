@@ -1,0 +1,62 @@
+html{
+	scroll-behavior: smooth;
+}
+
+.hero{
+	font-weight: 500;
+}
+#hero-background{
+	width: 100%;
+}
+.platforms{
+	position: relative;
+}
+.services{
+	position: relative;
+}
+
+.articles{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	max-height: 100vh;
+	overflow-y: scroll;
+}
+
+#details{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 2em;
+}
+.contact{
+	width: 100vw;
+	height: 80vh;
+}
+#form{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media screen and (max-width: 800px){
+	.hero{
+		height: 50vh;
+	}
+	.articles{
+		display: flex;
+		flex-direction: column;
+	}
+	#details{
+		flex-direction: column;
+	}
+	#hero-background{
+		background-origin: padding-box;
+		background-position: right;
+		height: 100%;
+	}
+	#action-button{
+		
+	}
+}
