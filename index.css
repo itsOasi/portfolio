@@ -75,6 +75,8 @@ body {
   width: 26.88rem;
   height: 15.44rem;
   object-fit: cover;
+  filter: blur(5px);
+  filter: blur(5px);
 }
 .hero-child {
   position: absolute;
