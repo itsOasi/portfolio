@@ -8,16 +8,10 @@ html{
 #hero-background{
 	width: 100%;
 }
-.platforms{
-	position: relative;
-}
-.services{
-	position: relative;
-}
 
 .articles{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: auto auto;
 	max-height: 100vh;
 	overflow-y: scroll;
 }
@@ -26,9 +20,18 @@ html{
 	position: absolute;
 	display: flex;
 	flex-direction: row;
+	justify-items: center;
+	align-items: center;
 	left: 50%;
 	transform: translateX(-50%);
+	gap: 20vw;
 	top: 2em;
+}
+#tech-srvcs{
+	font-size: 1.5em;
+}
+.about{
+	min-width: 20em;
 }
 .contact{
 	width: 100vw;
@@ -40,6 +43,18 @@ html{
 	transform: translateX(-50%);
 }
 
+#action-button{
+	position: relative;
+	transform: translateX(-50%);
+	min-width: 10em;
+}
+.menu-parent{
+	display: flex;
+	gap: 2em;
+}
+.menu-button{
+	text-decoration: underline;
+}
 @media screen and (max-width: 800px){
 	.hero{
 		height: 50vh;
@@ -50,6 +65,8 @@ html{
 	}
 	#details{
 		flex-direction: column;
+		align-content: stretch;
+		gap: 5vh;
 	}
 	#hero-background{
 		background-origin: padding-box;
@@ -57,6 +74,8 @@ html{
 		height: 100%;
 	}
 	#action-button{
+		margin-left: 50%;
+		transform: translateX(-50%);
 		
 	}
 }
