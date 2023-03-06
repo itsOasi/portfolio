@@ -7,63 +7,40 @@
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./index2.css" />
-	<title>Tech Consultant</title>
+	<title>itsOasi's Portfolio</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Source Code Pro:wght@400;500&display=swap"
     />
   </head>
   <body>
-    <div class="mobile">
-      <div class="header">
-        <div class="itsoasi">its.oasi</div>
-        <div class="spacer"></div>
-        <button class="icon-menu" id="iconMenu">
-          <img class="vector-icon2" alt="" />
-		  <img class="group-icon" src="public/group.svg"/>
-        </button>
-      </div>
-      <div class="hero">
-        <img id="hero-background"
-          class="unsplash-sg8nxmpwdm-icon"
-          alt=""
-          src="public/unsplash-sg8nxmpwdm@2x.png"/>
-        <div id="details">
-			<div class="about">
-				<b id="tech-srvcs">technical consultant</b>
-				<p>
-					I am a web developer, graphic artist, music producer and video editor 
-					with insights on lots of topics from science and technology, to finance 
-					and economics. View my certs and Resume in the menu.
-
+	<div id="mouse-glow"></div>
+	<div id="blur"></div>
+	<div class="header">
+		<div class="itsoasi">its.oasi</div>
+		<div class="spacer"></div>
+		<nav>
+			<a class="button" target="_blank" href="https://drive.google.com/drive/folders/16vnL0DqVgsJk6STYt7rKy_lHmaSp9TPH?usp=share_link"><div class="menu-button">Certifications</div></a>
+			<a class="button" target="_blank" href="./public/infosys_resume.pdf"><div class="menu-button">Resume</div></a>	  
+		</nav>
+		<button class="icon-menu" id="iconMenu" hidden>
+			<img class="vector-icon2" alt="" />
+			<img class="group-icon" src="public/group.svg"/>
+		</button>
+	</div>
+	<div id="hero">
+		<div id="content">
+		</div>
+		<div id="about" class="card">
+				<b id="tagline">About Me</b>
+				<p id="desc">
+					I am a web developer, graphic artist, music producer and video editor with insights on lots of topics from science and technology, to finance and economics. Read on to see where my findings take me!
 				</p>
-			</div>
-			<a id="action-button" class="call-to-action" href="#form">
-			  <div class="how-can-i">How can I help you?</div>
+			<a id="action-button" class="call-to-action" href="https://docs.google.com/forms/d/e/1FAIpQLSe8xixyaMbfFPtUCBCJWnO0RAelYPYmdHpaImp7pkb2ZGM47w/viewform?usp=sf_link">
+				<div class="how-can-i">Contact Me ></div>
 			</a>
 		</div>
-      </div>
-      <div class="content">
-        <div class="title">
-          <div class="itsoasi">DIY Articles</div>
-          <div class="want-to-learn">
-            Want to learn about technology? You’ve come to the right
-            place! (coming soon!)
-          </div>
-        </div>
-        <div class="articles">
-          <div class="articles-child"></div>
-          <div class="articles-child"></div>
-          <div class="articles-child"></div>
-          <div class="articles-child"></div>
-          <div class="articles-child"></div>
-          <div class="articles-child"></div>
-        </div>
-      </div>
-      <div class="contact">
-		<iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSe8xixyaMbfFPtUCBCJWnO0RAelYPYmdHpaImp7pkb2ZGM47w/viewform?embedded=true" width="80%" height="80%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-      </div>
-    </div>
+	</div>
 
     <div id="menuContainer" class="popup-overlay" style="display: none">
       <div class="menu">
@@ -71,8 +48,7 @@
           <div class="menu1">Menu</div>
           <a class="button" target="_blank" href="https://drive.google.com/drive/folders/16vnL0DqVgsJk6STYt7rKy_lHmaSp9TPH?usp=share_link"><div class="menu-button">Certifications</div></a>
           <a class="button" target="_blank" href="./public/infosys_resume.pdf"><div class="menu-button">Resume</div></a>
-          <a class="button" target="_blank" href="https://itsoasi.github.io/roseling_gd/"><div class="menu-button">Roseling Graphic Design</div></a>
-          <a class="button" target="_blank" href="https://itsoasi.github.io/innova/"><div class="menu-button">Innova Technologies</div></a>
+
         </div>
         <div class="icon-twitter-parent">
 			<!-- <a class="icon-twitter" href="">
@@ -85,32 +61,6 @@
       </div>
     </div>
 
-    <script>
-      var iconMenu = document.getElementById("iconMenu");
-      if (iconMenu) {
-        iconMenu.addEventListener("click", function () {
-          var popup = document.getElementById("menuContainer");
-          if (!popup) return;
-          var popupStyle = popup.style;
-          if (popupStyle) {
-            popupStyle.display = "flex";
-            popupStyle.zIndex = 100;
-            popupStyle.backgroundColor = "rgba(113, 113, 113, 0.3)";
-            popupStyle.alignItems = "center";
-            popupStyle.justifyContent = "center";
-          }
-          popup.setAttribute("closable", "");
-      
-          var onClick =
-            popup.onClick ||
-            function (e) {
-              if (e.target === popup && popup.hasAttribute("closable")) {
-                popupStyle.display = "none";
-              }
-            };
-          popup.addEventListener("click", onClick);
-        });
-      }
-      </script>
+    <script src="script.js"></script>
   </body>
 </html>

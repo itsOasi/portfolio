@@ -85,7 +85,6 @@ class Core:
 	}
 	cache=[""]
 		
-
 class Blob:
 	# blobs are passed around the system
 	# as the data for computation
