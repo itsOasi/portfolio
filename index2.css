@@ -12,6 +12,7 @@ a{
 	padding-left: 0;
 	height: fit-content;
 	padding-top: 1em;
+	z-index: 100;
 }
 #articles{
 	display: grid;
