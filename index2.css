@@ -131,10 +131,18 @@ nav{
 	.item{
 		font-size: medium;
 		flex-direction: row;
+		align-items: center;
 		width: 100%;
+		gap: 1em;
+		background-color: #00000033;
+		padding: 1em;
+		border-radius: 1em;
+	}
+	.item-title{
+		font-size: 1.25em;
 	}
 	.item-img{
-		height: 10vh;
+		width: 5em;
 	}
 	.item-det{
 		width: auto;
@@ -143,10 +151,12 @@ nav{
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+		margin: 0;
 	}
 	#about{
 		position: relative;
 		flex-direction: column;
+		background-color: transparent;
 	}
 	#desc{
 		width: 20em;
