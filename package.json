@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "firebase": "^10.7.1"
+  },
+  "name": "portfolio",
+  "description": "Just kidding I'm working on projects to add to my portfolio.",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "dev": "script.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
