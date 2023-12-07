@@ -1,4 +1,29 @@
+
 const HOST = "https://portfolio-server-2jochkae6a-uc.a.run.app"
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyDvhxK_bU91D9qrC2n4lRnvrcOQqXG_Veg",
+  authDomain: "practive-86c14.firebaseapp.com",
+  databaseURL: "https://practive-86c14.firebaseio.com",
+  projectId: "practive-86c14",
+  storageBucket: "practive-86c14.appspot.com",
+  messagingSenderId: "124264291305",
+  appId: "1:124264291305:web:ba7233a52ea14d4742c978",
+  measurementId: "G-LG0K91B1DX"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = getFirestore()
 
 let http = {
 	get: async(url) =>
@@ -67,10 +92,10 @@ document.body.onload = async function(){
 	let catalog = await res.json();
 	// console.log(catalog);
 	let catalog_list = document.querySelector("#content");
-	for (_prod in catalog){
+	for (let _prod in catalog){
 		add_product(catalog[_prod]);
 	}
-	for (prod in products){
+	for (let prod in products){
 		catalog_list.append(create_catalog_item(products[prod]));
 	}
 }
@@ -81,6 +106,16 @@ document.body.onmousemove = function(e){
 		left: `${e.clientX - mouse_glow.offsetWidth/2}px`,
 		top: `${e.clientY - mouse_glow.offsetWidth/2}px`
 	}, {duration: 1000, fill: "forwards"});
+}
+
+document.getElementById('action-button').onclick = (ev) =>{
+	let userPosition = null;
+	navigator.geolocation.getCurrentPosition((position)=>{
+		alert("success " + JSON.stringify(position));
+		const col_ref = collection(db, 'locations');
+		// addDoc(col_ref, {"name"})
+		// })
+	}, (error)=>{alert("error " + error)})
 }
 
 /***************************************************/
