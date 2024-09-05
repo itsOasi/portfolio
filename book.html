@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+    <link href="index.css" rel="stylesheet" type="text/css" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -28,10 +28,30 @@
 </head>
 
 <body>
-  Book Now
-  <div id="calendar">
+  <div id="mouse-glow"></div>
+  <div id="blur"></div>
+  <!-- Static navbar -->
+  <nav id="nav" class="row navbar navbar-default navbar-static-top">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Ontario Stallings</a>
+
+        <button class="navbar-toggle collapse" data-toggle="collapse" data-target="dropdown"></button>
+      </div>
+      <div class="collapse navbar-collapse" id="dropdown">
+        <ul class="nav navbar-nav">
+        </ul>
+      </div>
+  </nav>
+
+
+  <div class="container">
+  <div class="container">
+    <h1>Book Now</h1>
+    <div id="calendar">
+    </div>
   </div>
-  <script src="script.js">
+    
+  <script src="book.js">
   </script>
 </body>
 

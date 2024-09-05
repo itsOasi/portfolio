@@ -35,9 +35,16 @@ nav, nav>*, .navbar>*, .navbar-nav>li>a {
 	box-shadow: none !important;
 	text-shadow: none !important;
 	transition: all .3s;
+	vertical-align: middle !important;
 	&:hover{
 		color: var(--color-white) !important;
 	}
+}
+nav{
+	margin: 0 !important;
+}
+.navbar-brand{
+	margin: 1rem !important;
 }
 li{
 	list-style: none;
@@ -62,6 +69,7 @@ li{
 }
 .navbar-right{
 	float: right !important;
+	margin-right: 2rem !important;
 }
 
 a.project-link {
@@ -84,19 +92,6 @@ a.btn-primary.btn.btn-lg {
 }
 a{
 	color: var(--color-theme) !important;
-}
-
-.header {
-	position: fixed;
-	display: flex;
-	flex-direction: row;
-	align-items: stretch;
-	width: 100vw;
-	margin: 0vw;
-	padding-left: 0;
-	height: fit-content;
-	padding-top: 1em;
-	z-index: 100;
 }
 
 html {
@@ -123,7 +118,9 @@ iframe {
 
 	}
 }
-
+/* .title{
+	font-size: 10rem;
+} */
 #projects {
 	min-height: fit-content;
 	margin-bottom: 10vh;
@@ -314,5 +311,9 @@ nav {
 		flex-direction: column;
 		gap: .5rem;
 
+	}
+	.flip-entry-thumb{
+		border: none !important;
+		box-shadow: none !important;
 	}
 }
