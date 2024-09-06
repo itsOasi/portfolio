@@ -111,6 +111,7 @@ iframe {
 	border: none;
 	width: 80vw;
 	height: 100vh;
+	overflow: visible;
 
 	&>* {
 		background-color: transparent;
@@ -241,6 +242,8 @@ nav {
 		min-width: fit-content;
 	}
 }
+
+
 
 @media screen and (max-width: 800px) {
 	.header {
