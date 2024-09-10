@@ -141,10 +141,10 @@ br{
 }
 
 #about {
-	height: 100%;
 	
 	padding: 2rem;
 	border-radius: 1em;
+	background-color: var(--color-grey);
 }
 
 #profile_pic {
@@ -303,7 +303,7 @@ nav {
 	#about {
 		position: relative;
 		flex-direction: column;
-		background-color: transparent;
+		background-color: var(--color-grey);
 	}
 
 	#desc {
