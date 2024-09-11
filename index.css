@@ -126,9 +126,9 @@ iframe {
 }
 #projects {
 	min-height: fit-content;
+	padding: 2rem !important;
 	margin-bottom: 10vh;
 	background-color: var(--color-black) !important;
-	padding: 2rem;
 	border-radius: 1em;
 }
 
@@ -155,6 +155,13 @@ br{
 	background-position: 50% 80%;
 }
 
+#action {
+	padding: 2rem;
+	border-radius: 1em;
+	background-color: var(--color-grey);
+	margin-bottom: 10vh;
+	text-align: center;
+}
 #about {
 	padding: 2rem;
 	border-radius: 1em;
@@ -244,6 +251,10 @@ nav {
 
 .menu-button {
 	font-size: .5em;
+}
+
+#certs{
+	max-height: fit-content !important;
 }
 
 #mouse-glow {
