@@ -10,11 +10,12 @@
     <link rel="icon" href="../../favicon.ico">
 
     <link rel="stylesheet" href="./index.css" />
-    <title> Ontario Stallings Portfolio</title>
+    <title> Level Up Your Business</title>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Source Code Pro:wght@400;500&display=swap"
       />
+	  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -53,31 +54,37 @@
         </div>
     </nav>
   
-    <div id="hero" class="container">
+    <div id="hero" class="container-fluid">
+		<div class="container">
+			<!-- Main component for a primary marketing message or call to action -->
+			<div class="row align-middle">
+			  <div class="col-md-6">
+				  <h1 class="title">Ready to take your business to the next level?</h1>
+				  <p>Specializing in EMPOWERING small businesses with tailored web solutions.</p>
+				  <div>
+				  <a href="/book.html" class="btn btn-lg btn-primary">Let's get Started</a>
+				  </div>
+			  </div>
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="row align-middle">
-        <div class="col-md-6">
-        <h1 class="title">Ready to take your business to the next level?</h1>
-        <p>Specializing in EMPOWERING small businesses with tailored web solutions.</p>
-        <div>
-          <a href="/book.html" class="btn btn-lg btn-primary">Let's get Started</a>
-        </div>
-        </div>
-      </div>
-    </div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	Photo by <a href="https://unsplash.com/@naderabushhab?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nader Abushhab</a> on <a href="https://unsplash.com/photos/people-on-beach-during-daytime-HWLyAQ4Jsgc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+</div>
+	<h2 class="container"> About me </h2>
     <div id="about" class="container">
-      <div class="row">
+      <div class="row align-items-baseline">
         <div class="col-md-4">
-          <h2> About me </h2>
           <img id="profile_pic" src="./static/-zh5wmc.jpg" class="col-md-6" />
         </div>
-        <div class="col-md-8 align-self-end">
+        <div id="about-content" class="col-md-8">
+		  <div class="spacer"></div>
           <h2>
             Freelance Business Solutions Specialist
           </h2>
           <p>
-             A self-taught software and web developer with experience in entrepreneurship, consulting, and enterprise web wechnologies. Let's connect and discuss how I can help you take your business to the next level!
+             A self-taught software and web developer with experience in entrepreneurship, consulting, and enterprise web technologies. Let's connect and discuss how I can help you take your business to the next level!
 
           </p>
           <a href="/book.html" class="btn btn-lg btn-primary">Let's Connect</a>
@@ -93,63 +100,79 @@
        
     </div>
     
-    <div class="container">
-      <h1 class="text-center">Projects & Experiences</h1>
-      <div id="projects" class="jumbotron row">
-        <br/>
-        <ul class="col-12">
-          <h2>My Time at Infosys</h2>
-          <li>
-            <p>
-              Developed functional prototype for clients to demonstrate latest features in ServiceNow, such as Virtual Agent chat bot, Employee Center Pro service portal feature set, Flow Designer platform automation system.
-            </p> 
-
-          </li>
-          <li>
-          <p>
-
-          Built a robust multilingual intranet portal/app with virtual agent and AI driven search and recommendations systems. Ensured responsive layout, user friendly design and smooth transitions with CSS and bootstrap.
-          </p>
-
-          </li>
-          <li>
-          <p>
-          Constructed IT service portal with custom Approval and Ticketing systems while following client provided mockups and color pallets to amplify client identity. Helped customer service portal team optimize their customer lookup system, increasing database query speeds by 200-400%.
-
-          </p>
-          </li>
-
-        </ul>
+	<h1 class="container">Projects & Experiences</h1>
+    <div id="projects" class="container">
+      <div class="row">
+		<h2>My Time at Infosys</h2>
+		<div class="col-md-4 card">
+			<i class="bi bi-translate card-icon"></i>
+			<p>
+				Built a robust multilingual intranet portal/app with virtual agent and AI driven search and recommendations systems.
+			</p>
+		</div>
+		<div class="col-md-4 card">
+			<i class="bi bi-columns-gap card-icon"></i>
+			<p>
+				Ensured responsive layout, user friendly design and smooth transitions with CSS and bootstrap.
+			</p>
+		</div>
+		<div class="col-md-4 card">
+			<i class="bi bi-ticket-detailed-fill card-icon"></i>
+			<p>
+				Constructed IT service portal with custom Approval and Ticketing systems while following client provided mockups and color pallets to amplify client identity.
+			</p>
+		</div>
+		<div class="col-md-4 card">
+			<i class="bi bi-speedometer2 card-icon"></i>
+			<p>
+				Helped customer service portal team optimize their customer lookup system, increasing database query speeds by 200-400%.
+			</p>
+		</div>
+		<div class="col-md-4 card">
+			<i class="bi bi-puzzle card-icon"></i>
+			<p>
+				Developed prototype to demonstrate latest features in ServiceNow, such as Virtual Agent chat bot, Employee Center Pro service portal feature set, Flow Designer platform automation system.
+			</p>
+		</div>
+		
       </div>
     </div>
     
-    <div class="container">
-      <h2>Personal Projects</h2>
-      <div class="row">
-          <div class="col-md-6">
-            <h3>
-              <a class="project-link" href="https://roseling-gd-2jochkae6a-uc.a.run.app/">
-                Roseling Graphic Design 
-              </a>
-            </h3>
-            <p>
-              Built with a custom dockerized python server using flask and react. Integrates with ecommerce platforms for digital product services.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <h3>
-              <a class="project-link" href="https://innova-2jochkae6a-uc.a.run.app/">
-                Innova Technologies
-              </a>
-            </h3>
-            <p>
-              My personal app store, where I host my apps tools and games.
-            </p>
-          </div>
-      </div>
-      <br/>
-      <br/>
-      <br/>
+    <div id="personal" class="container">
+		<h2>Personal Projects</h2>
+		<div class="row">
+			<div class="card col-md-6">
+				<div>
+					<img src="https://roseling-gd-2jochkae6a-uc.a.run.app/light.png" class="proj-icon"/>
+				</div>
+				<div>
+					<h3>
+						<a href="https://roseling-gd-2jochkae6a-uc.a.run.app/">
+							Roseling Graphic Design 
+						</a>
+					</h3>
+					<p>
+						Built with a custom dockerized python server using flask and react. Integrates with ecommerce platforms for digital product services.
+					</p>
+				</div>
+			</div>
+			<div class="card col-md-6">
+				<div>
+					<img src="https://innova-2jochkae6a-uc.a.run.app/innova-title-11@2x.png" class="proj-icon"/>
+				</div>
+				<div>
+					<h3>
+						<a href="https://innova-2jochkae6a-uc.a.run.app/">
+							Innova Technologies
+						</a>
+					</h3>
+					<p>
+						My personal app store, where I host my apps tools and games.
+					</p>
+				</div>
+				</div>
+			</div>
+		</div>
     </div> <!-- /container -->
 
     <div class="container">

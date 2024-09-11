@@ -4,8 +4,8 @@
 
 	/* font sizes */
 	--font-size-base: 1rem;
-	--font-size-lg: 1.5rem;
-	--font-size-xl: 2.5rem;
+	--font-size-lg: 2.5rem;
+	--font-size-xl: 5rem;
 
 	/* Colors */
 	--color-theme: #404;
@@ -26,6 +26,7 @@ body {
 	color: var(--color-white) !important;
 	max-width: 100% !important;
 }
+
 
 nav, nav>*, .navbar>*, .navbar-nav>li>a {
 	background-image: none !important;
@@ -105,6 +106,7 @@ html {
 
 .spacer {
 	width: 100%;
+	height: 100%;
 }
 
 iframe {
@@ -119,14 +121,24 @@ iframe {
 
 	}
 }
-/* .title{
-	font-size: 10rem;
-} */
+.title{
+	font-size: var(--font-size-xl);
+}
 #projects {
 	min-height: fit-content;
 	margin-bottom: 10vh;
 	background-color: var(--color-black) !important;
+	padding: 2rem;
+	border-radius: 1em;
 }
+
+#personal {
+	min-height: fit-content;
+	margin-bottom: 10vh;
+	padding: 2rem;
+	border-radius: 1em;
+}
+
 br{
 	height: 20vh !important;
 }
@@ -136,27 +148,50 @@ br{
 	text-decoration: underline;
 }
 #hero {
-	margin-top: 10vh !important;
-	margin-bottom: 10vh !important;
+	height: 60vh;
+	padding-top: 5rem;
+	background-image: url("static/nader-abushhab-HWLyAQ4Jsgc-unsplash.jpg");
+	background-size: cover;
+	background-position: 50% 80%;
 }
 
 #about {
-	
 	padding: 2rem;
 	border-radius: 1em;
 	background-color: var(--color-grey);
+	margin-bottom: 10vh;
+}
+#about-content {
+	margin: auto !important;
 }
 
 #profile_pic {
-	max-height: 40vh;
+	max-height: 20vh;
 	width: auto;
+	max-width: 100%;
+	margin: 0 !important;
+	padding: 0 !important;
+	border-radius: 1em;
+}
+
+.proj-icon{
+	max-height: 10vh;
+	width: auto;
+}
+.proj-card{
+	transition: all 1s;
+}
+.card-icon{
+	font-size: 10rem;
+	color: var(--color-theme)
 }
 
 .card {
 	transition: all 1s;
+	text-align: center;
 }
 
-.card:hover {
+.card:hover, .proj-card:hover {
 	transform: scale(105%);
 }
 
